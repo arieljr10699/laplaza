@@ -1,0 +1,95 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "a20b700b-44b2-41cd-8059-ded399c97b91": {
+        "id": "a20b700b-44b2-41cd-8059-ded399c97b91",
+        "parent": null,
+        "name": "LaPlaza.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "LaPlaza.js",
+        "cursor": {
+          "lineNumber": 30,
+          "column": 1
+        },
+        "config": {
+          "runtime": "nodejs10.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "LaPlaza"
+        },
+        "triggers": [
+          {
+            "resourceName": "alexaSK3280ed53de834821ae0d18e51e1729c1",
+            "config": {}
+          }
+        ]
+      }
+    },
+    "openFiles": [
+      "a20b700b-44b2-41cd-8059-ded399c97b91"
+    ],
+    "currentFileId": "a20b700b-44b2-41cd-8059-ded399c97b91",
+    "resources": {
+      "alexaSK3280ed53de834821ae0d18e51e1729c1": {
+        "name": "alexaSK3280ed53de834821ae0d18e51e1729c1",
+        "type": "ALEXA",
+        "config": {
+          "type": 1,
+          "verifiedID": true,
+          "skillID": "amzn1.ask.skill.3280ed53-de83-4821-ae0d-18e51e1729c1",
+          "applicationID": ""
+        }
+      }
+    },
+    "customTemplate": {
+      "syntax": "JSON",
+      "overrideDefault": false,
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "ask-sdk": {
+          "name": "ask-sdk",
+          "language": "nodejs",
+          "version": "2.7.0",
+          "dev": false,
+          "notRemovable": false
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "sigmaVersion": "1.4.1.5",
+    "projectName": "LaPlaza",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "language": "nodejs",
+    "platformRegions": {},
+    "lastSave": 1600547685058
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "laplaza",
+      "url": "https://github.com/arieljr10699/laplaza"
+    }
+  }
+}
