@@ -27,6 +27,7 @@ const LaPlazaHandler = {
     handle(handlerInput) {
         // invoke custom logic of the handler
         const product = String(Alexa.getSlotValue(handlerInput.requestEnvelope, 'product'));
+        const cantidad = Number(Alexa.getSlotValue(handlerInput.requestEnvelope, 'cantidad'));
 
         
         const speechText = 'This is my custom intent handler';
