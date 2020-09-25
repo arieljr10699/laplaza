@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "LaPlaza.js",
         "cursor": {
-          "lineNumber": 31,
-          "column": 1
+          "lineNumber": 32,
+          "column": 26
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -44,6 +44,24 @@
           "skillID": "amzn1.ask.skill.3280ed53-de83-4821-ae0d-18e51e1729c1",
           "applicationID": ""
         }
+      },
+      "ddbLaPlazaProducts": {
+        "name": "ddbLaPlazaProducts",
+        "type": "DynamoDB",
+        "config": {
+          "mode": 0,
+          "table": {
+            "arn": "",
+            "name": "LaPlazaProducts",
+            "partitionKey": "ProductId",
+            "partitionKeyType": "N",
+            "hasSortKey": false,
+            "sortKey": "",
+            "sortKeyType": "S",
+            "payPerRequest": true,
+            "mode": 0
+          }
+        }
       }
     },
     "customTemplate": {
@@ -70,6 +88,13 @@
           "version": "2.7.0",
           "dev": false,
           "notRemovable": false
+        },
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "language": "nodejs",
+          "version": "2.644.0",
+          "dev": true,
+          "notRemovable": false
         }
       }
     }
@@ -83,7 +108,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1600897952293
+    "lastSave": 1600993012445
   },
   "VCS_STATE": {
     "provider": "GitHub",

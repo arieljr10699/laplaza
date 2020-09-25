@@ -1,3 +1,5 @@
+const AWS = require('aws-sdk');
+const ddb = new AWS.DynamoDB.DocumentClient();
 const Alexa = require('ask-sdk');
 let skill;
 
@@ -8,10 +10,10 @@ exports.handler = async function (event, context) {
             .addErrorHandlers(ErrorHandler)
             .addRequestHandlers(
             // delete undefined built-in intent handlers
-            
+
             LaunchRequestHandler,
             LaPlazaHandler
-           
+
             ).create();
     }
 
@@ -24,13 +26,29 @@ const LaPlazaHandler = {
         return handlerInput.requestEnvelope.request.type === 'IntentRequest'
             && handlerInput.requestEnvelope.request.intent.name === 'laPlaza';
     },
-    handle(handlerInput) {
+    async handle(handlerInput) {
         // invoke custom logic of the handler
         const product = String(Alexa.getSlotValue(handlerInput.requestEnvelope, 'product'));
         const cantidad = Number(Alexa.getSlotValue(handlerInput.requestEnvelope, 'cantidad'));
+        const speechText = 'none';
+        try {
+            let data = await ddb.get({
+                TableName: "LaPlazaProducts",
+                Key: {
+                    ProductId: 1,
+                    ProductName: "Jeans de Hombre.",
+                    ProductQuantity: 22
+                }
+            }).promise();
+
+            const speechText = ProductQuantity + ProductName + 'agregado a la canasta exitosamente';
+
+        } catch (err) {
+            const speechText = ProductName + 'no encontrado, por favor intente mas tarde.';
+        };
+
 
         
-        const speechText = 'This is my custom intent handler';
         return handlerInput.responseBuilder
             .speak(speechText)
             .withShouldEndSession(false)

@@ -23,6 +23,25 @@
     }
   },
   "Resources": {
+    "ddbLaPlazaProducts": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "TableName": "LaPlazaProducts",
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "ProductId",
+            "AttributeType": "N"
+          }
+        ],
+        "KeySchema": [
+          {
+            "AttributeName": "ProductId",
+            "KeyType": "HASH"
+          }
+        ],
+        "BillingMode": "PAY_PER_REQUEST"
+      }
+    },
     "LaPlaza": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -80,7 +99,29 @@
               }
             }
           ]
-        }
+        },
+        "Policies": [
+          {
+            "PolicyName": "LaPlazaPolicy",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "dynamodb:GetItem"
+                  ],
+                  "Resource": {
+                    "Fn::GetAtt": [
+                      "ddbLaPlazaProducts",
+                      "Arn"
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
       }
     },
     "alexaSK3280ed53de83LaPlazaPermission": {
