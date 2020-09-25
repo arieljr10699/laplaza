@@ -12,7 +12,7 @@
         "filePath": "LaPlaza.js",
         "cursor": {
           "lineNumber": 32,
-          "column": 26
+          "column": 39
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -108,7 +108,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1600993012445
+    "lastSave": 1600995100566
   },
   "VCS_STATE": {
     "provider": "GitHub",

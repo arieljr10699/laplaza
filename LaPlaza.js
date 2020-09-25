@@ -41,10 +41,10 @@ const LaPlazaHandler = {
                 }
             }).promise();
 
-            const speechText = ProductQuantity + ProductName + 'agregado a la canasta exitosamente';
+            speechText = data.ProductQuantity + data.ProductName + 'agregado a la canasta exitosamente';
 
         } catch (err) {
-            const speechText = ProductName + 'no encontrado, por favor intente mas tarde.';
+             speechText = data.ProductName + 'no encontrado, por favor intente mas tarde.';
         };
 
 
