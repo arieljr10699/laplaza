@@ -4,6 +4,7 @@ const Alexa = require('ask-sdk');
 let skill;
 
 exports.handler = async function (event, context) {
+    debugger;
     //console.log('REQUEST ' + JSON.stringify(event));
     if (!skill) {
         skill = Alexa.SkillBuilders.custom()
@@ -24,34 +25,31 @@ exports.handler = async function (event, context) {
 const LaPlazaHandler = {
     canHandle(handlerInput) {
         return handlerInput.requestEnvelope.request.type === 'IntentRequest'
-            && handlerInput.requestEnvelope.request.intent.name === 'laPlaza';
+            && handlerInput.requestEnvelope.request.intent.name === 'LaPlaza';
     },
     async handle(handlerInput) {
         // invoke custom logic of the handler
-        var product = String(Alexa.getSlotValue(handlerInput.requestEnvelope, 'product'));
-        var cantidad = Number(Alexa.getSlotValue(handlerInput.requestEnvelope, 'cantidad'));
-        var speechText = 'none';
+        const product = String(Alexa.getSlotValue(handlerInput.requestEnvelope, 'product'));
+        const cantidad = Number(Alexa.getSlotValue(handlerInput.requestEnvelope, 'cantidad'));
+        let speechText = 'Sirve';
+
         try {
             let data = await ddb.get({
-                TableName: "LaPlazaProducts",
+                TableName: "LaPlaza",
                 Key: {
-                    ProductId: 1,
-                    ProductName: "Jeans de Hombre.",
-                    ProductQuantity: 22
+                    Name: product
                 }
             }).promise();
 
-            speechText = data.ProductQuantity + data.ProductName + 'agregado a la canasta exitosamente';
+                speechText = data.Item.Name + 'agregado a la canasta con exito';
 
         } catch (err) {
-             speechText = data.ProductName + 'no encontrado, por favor intente mas tarde.';
+            speechText = 'No estoy segura';
         };
 
-if(cantidad > data.Item.ProductQuantity){
-    speechText = 'Ha solicitado una cantidad mayor a la del stock, por favor cambie la cantidad.'
-}
 
-        
+
+
         return handlerInput.responseBuilder
             .speak(speechText)
             .withShouldEndSession(false)

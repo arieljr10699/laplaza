@@ -23,19 +23,19 @@
     }
   },
   "Resources": {
-    "ddbLaPlazaProducts": {
+    "ddbLaPlaza": {
       "Type": "AWS::DynamoDB::Table",
       "Properties": {
-        "TableName": "LaPlazaProducts",
+        "TableName": "LaPlaza",
         "AttributeDefinitions": [
           {
-            "AttributeName": "ProductId",
-            "AttributeType": "N"
+            "AttributeName": "Name",
+            "AttributeType": "S"
           }
         ],
         "KeySchema": [
           {
-            "AttributeName": "ProductId",
+            "AttributeName": "Name",
             "KeyType": "HASH"
           }
         ],
@@ -113,7 +113,7 @@
                   ],
                   "Resource": {
                     "Fn::GetAtt": [
-                      "ddbLaPlazaProducts",
+                      "ddbLaPlaza",
                       "Arn"
                     ]
                   }

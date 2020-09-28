@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "LaPlaza.js",
         "cursor": {
-          "lineNumber": 52,
-          "column": 2
+          "lineNumber": 32,
+          "column": 60
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -27,7 +27,16 @@
             "resourceName": "alexaSK3280ed53de834821ae0d18e51e1729c1",
             "config": {}
           }
-        ]
+        ],
+        "testCases": {
+          "3b603ada-19d7-4124-8245-0d8eb2044e9a": {
+            "id": "3b603ada-19d7-4124-8245-0d8eb2044e9a",
+            "name": "Agregar Manzanas",
+            "functionId": "a20b700b-44b2-41cd-8059-ded399c97b91",
+            "event": "{\r\n\t\"version\": \"1.0\",\r\n\t\"session\": {\r\n\t\t\"new\": false,\r\n\t\t\"sessionId\": \"amzn1.echo-api.session.491b7689-2de2-4c51-b147-2413d380a93c\",\r\n\t\t\"application\": {\r\n\t\t\t\"applicationId\": \"amzn1.ask.skill.3280ed53-de83-4821-ae0d-18e51e1729c1\"\r\n\t\t},\r\n\t\t\"user\": {\r\n\t\t\t\"userId\": \"amzn1.ask.account.AHSAQGU42LOUSG5EYNJHAXIEK7HZOAYK5L7L7UPPPXUX2DHNZDNDIQABC7NZBVFYJWAEIXLRU6MMLNKU4EIO2B3GN634NZYYZPZJOK7ZUGTHTKMO2NEVJ7VAILXCVCSHDRXPV2TA6OQCTPPKCQCQM5NCEHFHSMWYJL6FEQCHECBU6NU4NKRHXDHQYFFD6TZQNCVTECZDUDD6GUY\"\r\n\t\t}\r\n\t},\r\n\t\"context\": {\r\n\t\t\"Viewports\": [\r\n\t\t\t{\r\n\t\t\t\t\"type\": \"APL\",\r\n\t\t\t\t\"id\": \"main\",\r\n\t\t\t\t\"shape\": \"RECTANGLE\",\r\n\t\t\t\t\"dpi\": 213,\r\n\t\t\t\t\"presentationType\": \"STANDARD\",\r\n\t\t\t\t\"canRotate\": false,\r\n\t\t\t\t\"configuration\": {\r\n\t\t\t\t\t\"current\": {\r\n\t\t\t\t\t\t\"video\": {\r\n\t\t\t\t\t\t\t\"codecs\": [\r\n\t\t\t\t\t\t\t\t\"H_264_42\",\r\n\t\t\t\t\t\t\t\t\"H_264_41\"\r\n\t\t\t\t\t\t\t]\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\"size\": {\r\n\t\t\t\t\t\t\t\"type\": \"DISCRETE\",\r\n\t\t\t\t\t\t\t\"pixelWidth\": 960,\r\n\t\t\t\t\t\t\t\"pixelHeight\": 600\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t],\r\n\t\t\"Viewport\": {\r\n\t\t\t\"experiences\": [\r\n\t\t\t\t{\r\n\t\t\t\t\t\"arcMinuteWidth\": 246,\r\n\t\t\t\t\t\"arcMinuteHeight\": 144,\r\n\t\t\t\t\t\"canRotate\": false,\r\n\t\t\t\t\t\"canResize\": false\r\n\t\t\t\t}\r\n\t\t\t],\r\n\t\t\t\"shape\": \"RECTANGLE\",\r\n\t\t\t\"pixelWidth\": 960,\r\n\t\t\t\"pixelHeight\": 600,\r\n\t\t\t\"dpi\": 213,\r\n\t\t\t\"currentPixelWidth\": 960,\r\n\t\t\t\"currentPixelHeight\": 600,\r\n\t\t\t\"touch\": [\r\n\t\t\t\t\"SINGLE\"\r\n\t\t\t],\r\n\t\t\t\"video\": {\r\n\t\t\t\t\"codecs\": [\r\n\t\t\t\t\t\"H_264_42\",\r\n\t\t\t\t\t\"H_264_41\"\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t},\r\n\t\t\"Extensions\": {\r\n\t\t\t\"available\": {\r\n\t\t\t\t\"aplext:backstack:10\": {}\r\n\t\t\t}\r\n\t\t},\r\n\t\t\"System\": {\r\n\t\t\t\"application\": {\r\n\t\t\t\t\"applicationId\": \"amzn1.ask.skill.3280ed53-de83-4821-ae0d-18e51e1729c1\"\r\n\t\t\t},\r\n\t\t\t\"user\": {\r\n\t\t\t\t\"userId\": \"amzn1.ask.account.AHSAQGU42LOUSG5EYNJHAXIEK7HZOAYK5L7L7UPPPXUX2DHNZDNDIQABC7NZBVFYJWAEIXLRU6MMLNKU4EIO2B3GN634NZYYZPZJOK7ZUGTHTKMO2NEVJ7VAILXCVCSHDRXPV2TA6OQCTPPKCQCQM5NCEHFHSMWYJL6FEQCHECBU6NU4NKRHXDHQYFFD6TZQNCVTECZDUDD6GUY\"\r\n\t\t\t},\r\n\t\t\t\"device\": {\r\n\t\t\t\t\"deviceId\": \"amzn1.ask.device.AFOAMYQDRAFR65CZYNC5OF3YWC5N6XSGVJUE53KWMO2VG7KE55CHWX5Y7JVDQFQ6BZZQVV6TFOLNHFIG2O5ACAE74NAG4B5CTEGT47SD7UJ6WHMO6M5EXZZS26SFLVSCKUUFI6EUVVZ3NSCSYFN7ZEKGQZHTSFVWA326KT3AUAKCT6P5HRNUQ\",\r\n\t\t\t\t\"supportedInterfaces\": {}\r\n\t\t\t},\r\n\t\t\t\"apiEndpoint\": \"https://api.amazonalexa.com\",\r\n\t\t\t\"apiAccessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjMyODBlZDUzLWRlODMtNDgyMS1hZTBkLTE4ZTUxZTE3MjljMSIsImV4cCI6MTYwMTI3NjM3MCwiaWF0IjoxNjAxMjc2MDcwLCJuYmYiOjE2MDEyNzYwNzAsInByaXZhdGVDbGFpbXMiOnsiY29udGV4dCI6IkFBQUFBQUFBQUFEM1lCdFdoVVhxNFgya25ZaVRyTHhhS3dFQUFBQUFBQUQzR2wzNEY5dzJUWG1ScHI4Nnh6U0VuUmVTaGxlbzdVeUlrRXhmeEFMQXpKQ1M0MjNUQ0c2SlpWWjQ1c2RQT1ZPUkRJM2NKanJkZi9ESlZmenZSZG9VaTF5V3ArR3VGRmo3Q1Z6Q0tyVWM4QTFtVkhIb0l2OXdnYUNvZnRaaGNvZ1Fmc1J1ZkJFMytobFkxUkpLdDVhcGtUYldrREVXaU1DZU1tQ2NDK0JMSTdVSUJzUVlRZGo5UEFnR1hEYklxTzg0K0s4bkZ1WXNSN2kvYUFqVGlRZEFHZDdGb2V2NDNmbCttOHFiNmRxNFZBZmJaeUhZV1VKelc5OHYwV0laVGNJUnNxbGtSTDBXMFlrYXpjeHhxREc0ZEp1TTZIMUxxUkYvbjRXZUhSSmFzSWZmdkpzZWx2Uk8rTnVvYTI1ZzNKd3gzN1dvZ29KaHRncnpsVXBXeVZHUFE5LzJ1eWFveVl2Wlhhdm9FeGpnTS9wMlZSb3lLSGlZOE9BaVRyQ1hoMVVHbW1vOXNaSysvSGRpaEE9PSIsImNvbnNlbnRUb2tlbiI6bnVsbCwiZGV2aWNlSWQiOiJhbXpuMS5hc2suZGV2aWNlLkFGT0FNWVFEUkFGUjY1Q1pZTkM1T0YzWVdDNU42WFNHVkpVRTUzS1dNTzJWRzdLRTU1Q0hXWDVZN0pWRFFGUTZCWlpRVlY2VEZPTE5IRklHMk81QUNBRTc0TkFHNEI1Q1RFR1Q0N1NEN1VKNldITU82TTVFWFpaUzI2U0ZMVlNDS1VVRkk2RVVWVlozTlNDU1lGTjdaRUtHUVpIVFNGVldBMzI2S1QzQVVBS0NUNlA1SFJOVVEiLCJ1c2VySWQiOiJhbXpuMS5hc2suYWNjb3VudC5BSFNBUUdVNDJMT1VTRzVFWU5KSEFYSUVLN0haT0FZSzVMN0w3VVBQUFhVWDJESE5aRE5ESVFBQkM3TlpCVkZZSldBRUlYTFJVNk1NTE5LVTRFSU8yQjNHTjYzNE5aWVlaUFpKT0s3WlVHVEhUS01PMk5FVko3VkFJTFhDVkNTSERSWFBWMlRBNk9RQ1RQUEtDUUNRTTVOQ0VIRkhTTVdZSkw2RkVRQ0hFQ0JVNk5VNE5LUkhYREhRWUZGRDZUWlFOQ1ZURUNaRFVERDZHVVkifX0.D_zJtdtoRJEQUFpHYXzOfftE1r6B2SU3jGkRpRRt-CuLJZ_BYLulHv5z67wAHd3GxBKSgm6SH8Mhk0jl1oD2V-Ec3O4FlHo1deOvfzheH5cPTri-huDqFcE50AKVg3Sr2vPh6cjcWEl_Z5he8wgQRC1MaubaVR3y6u4C6H85dfSGqROXn70H9kqrhXonzjkD1I8xPzRrQfHw4mPJeJudxY-rleOxe-EB4ZetXLcCTJpBfmDaSkqH1mklj5TGWjM-PW6yxwe6s2upouDxiZz9lE8zOKUWWreOb6iuZOXtx8qnV0t3as9pnNndbuGIAGnbIBnFaEvryP-gpf-x99DOxA\"\r\n\t\t}\r\n\t},\r\n\t\"request\": {\r\n\t\t\"type\": \"IntentRequest\",\r\n\t\t\"requestId\": \"amzn1.echo-api.request.51f5f576-d3e8-4d8e-82fc-70d36a3f24a5\",\r\n\t\t\"locale\": \"es-ES\",\r\n\t\t\"timestamp\": \"2020-09-28T06:54:30Z\",\r\n\t\t\"intent\": {\r\n\t\t\t\"name\": \"LaPlaza\",\r\n\t\t\t\"confirmationStatus\": \"NONE\",\r\n\t\t\t\"slots\": {\r\n\t\t\t\t\"product\": {\r\n\t\t\t\t\t\"name\": \"product\",\r\n\t\t\t\t\t\"value\": \"peras\",\r\n\t\t\t\t\t\"confirmationStatus\": \"NONE\",\r\n\t\t\t\t\t\"source\": \"USER\",\r\n\t\t\t\t\t\"slotValue\": {\r\n\t\t\t\t\t\t\"type\": \"Simple\",\r\n\t\t\t\t\t\t\"value\": \"peras\"\r\n\t\t\t\t\t}\r\n\t\t\t\t},\r\n\t\t\t\t\"cantidad\": {\r\n\t\t\t\t\t\"name\": \"cantidad\",\r\n\t\t\t\t\t\"value\": \"2\",\r\n\t\t\t\t\t\"confirmationStatus\": \"NONE\",\r\n\t\t\t\t\t\"source\": \"USER\",\r\n\t\t\t\t\t\"slotValue\": {\r\n\t\t\t\t\t\t\"type\": \"Simple\",\r\n\t\t\t\t\t\t\"value\": \"2\"\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}",
+            "eventTemplate": "hello-world"
+          }
+        }
       }
     },
     "openFiles": [
@@ -45,16 +54,16 @@
           "applicationID": ""
         }
       },
-      "ddbLaPlazaProducts": {
-        "name": "ddbLaPlazaProducts",
+      "ddbLaPlaza": {
+        "name": "ddbLaPlaza",
         "type": "DynamoDB",
         "config": {
           "mode": 0,
           "table": {
             "arn": "",
-            "name": "LaPlazaProducts",
-            "partitionKey": "ProductId",
-            "partitionKeyType": "N",
+            "name": "LaPlaza",
+            "partitionKey": "Name",
+            "partitionKeyType": "S",
             "hasSortKey": false,
             "sortKey": "",
             "sortKeyType": "S",
@@ -108,7 +117,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1601259688197
+    "lastSave": 1601277880369
   },
   "VCS_STATE": {
     "provider": "GitHub",
