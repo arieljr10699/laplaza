@@ -28,9 +28,9 @@ const LaPlazaHandler = {
     },
     async handle(handlerInput) {
         // invoke custom logic of the handler
-        const product = String(Alexa.getSlotValue(handlerInput.requestEnvelope, 'product'));
-        const cantidad = Number(Alexa.getSlotValue(handlerInput.requestEnvelope, 'cantidad'));
-        const speechText = 'none';
+        var product = String(Alexa.getSlotValue(handlerInput.requestEnvelope, 'product'));
+        var cantidad = Number(Alexa.getSlotValue(handlerInput.requestEnvelope, 'cantidad'));
+        var speechText = 'none';
         try {
             let data = await ddb.get({
                 TableName: "LaPlazaProducts",
@@ -47,6 +47,9 @@ const LaPlazaHandler = {
              speechText = data.ProductName + 'no encontrado, por favor intente mas tarde.';
         };
 
+if(cantidad > data.Item.ProductQuantity){
+    speechText = 'Ha solicitado una cantidad mayor a la del stock, por favor cambie la cantidad.'
+}
 
         
         return handlerInput.responseBuilder
@@ -64,7 +67,7 @@ const ErrorHandler = {
         console.log('Error handled: ' + JSON.stringify(error.message));
         // console.log('Original Request was:', JSON.stringify(handlerInput.requestEnvelope.request, null, 2));
 
-        const speechText = 'Sorry, your skill encountered an error';
+        const speechText = 'No sirve';
         return handlerInput.responseBuilder
             .speak(speechText)
             .withShouldEndSession(false)
@@ -80,7 +83,7 @@ const LaunchRequestHandler = {
         return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speechText = 'Bienvenido a La Plaza, ¿en qué puedo ayudarle?';
+        const speechText = 'Bienvenido a La Plaza, ¿en que puedo ayudarle?';
         return handlerInput.responseBuilder
             .speak(speechText)
             .withShouldEndSession(false)
